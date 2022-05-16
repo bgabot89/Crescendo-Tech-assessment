@@ -3,8 +3,8 @@
 
 <head>
     <title>Research Professional Platform</title>
-    <meta name="author" content="BG">
-    <meta name="keywords" content="pictures, photos">
+    <meta name="author" content="Research">
+    <meta name="keywords" content="platform, research, pictures, photos">
     <meta name="description" content="Landing Page for Research Professional Platform">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,19 +15,16 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 
-<style>
-
- </style>
 
 <body>
 
 <!--Nav-->
-    <nav>
+    <nav id="nav">
         <div class="logo-container">
             <img class="logo-img" src="images/logo.png"/> <!--logo here-->
             <img class="logo-nav-mbl" src="images/Logo-nav-mbl.png"/>
-            <h1 class="title"><span class="main">Research Professional</span> 
-            <br/> <span class="subtitle">Platform</span></h1>
+            <h1 class="title"><span id="nav-main">Research Professional</span> 
+            <span id="nav-subtitle">Platform</span></h1>
         </div>
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -46,7 +43,8 @@
 <div id="hero" class="img-container">
     <div class="layer">
         <div class="hero-text">
-        <h1 class="page-header">ACME Wealth Management Platforms</h1>
+        <h1 class="page-header-mbl">Research Professional Platform</h1>
+        <h1 class="page-header"><span id="hero-name">ACME Wealth</span><br/> <span id="hero-sub">Management Platforms</span></h1>
         <div class="dot-mbl">
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -162,7 +160,7 @@
         </div>
         <div class="event-container">
             <h2 class="date"><span class="month">May</span><br/><span class="num">6</span></h2>
-            <h2 class="event-title">>Research Exchange</h2>
+            <h2 class="event-title">Research Exchange</h2>
             <p>Find the best online resources to help with your investments...</p>
             <button class="btn">Get more insight</button>
         </div>
@@ -178,7 +176,6 @@
     <p style="color: white; margin-left: 20%">Call us at 111-222-3333<br/>
         for more information </p>
     </div>
-
     <div class="footer-col">
         <ul class="footer-menu">
             <li class="footer-social">Social Share</li>
@@ -192,8 +189,8 @@
 <!--Footer Mobile-->
 <footer class="footer-mbl">
     <ul class="footer-terms">
-        <li>Privacy Policy</li>
-        <li>Terms of Use</li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms of Use</a></li>
     </ul>
     <ul class="footer-menu">
         <li><a href="">Home</a></li>
@@ -222,6 +219,28 @@ for ( var i=0, len = galleryElems.length; i < len; i++ ) {
     // Disable previous & next buttons
   });
 }
+
+// Create a media condition that targets viewports at least 768px wide 
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+// const container = document.getElementById("hero-name");
+// let br = document.createElement("br");
+// container.appendChild(br);
+// console.log(container);
+
+function checkQuery(e) {
+    if (e.matches) {
+        console.log('media query matches');
+    }
+}
+
+// Register event listener
+mediaQuery.addListener(checkQuery)
+
+// Initial check
+checkQuery(mediaQuery)
+
+
 </script>
 
 </html>
